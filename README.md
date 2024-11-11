@@ -12,6 +12,6 @@ This version introduces priority to manage conflicts and prevent deadlock. Each 
 ### <u><span style="font-size: 1.5em;">-lock3.erl</span></u>
 This lock uses Lamport clocks to provide fair access based on logical timestamps. Each lock instance maintains a Lamport clock, which is incremented with each access request. Requests are prioritized based on their Lamport timestamp, with earlier logical times gaining access first. If two requests have the same timestamp, priority is determined by the instance identifier. This logical ordering helps ensure fairness and avoids deadlocks, even in high-conflict scenarios. However, since workers themselves are not involved in the Lamport clock, real-time ordering is not guaranteed.
 
-### <u><span style="font-size: 1.5em;">Module or Mutty_new</span></u>
+### <u><span style="font-size: 1.5em;">-Module or Mutty_new.erl</span></u>
 The muty module sets up and manages the worker and lock instances. It can initiate lock instances using different lock modules (lock1, lock2, or lock3), which allows for flexibility in testing different locking mechanisms.
 It also manages worker behavior, including sleep and work times, which are used to simulate varying levels of contention. The stop function terminates all worker instances, allowing the system to gather statistics and analyze the performance and fairness of each lock implementation under different configurations.
