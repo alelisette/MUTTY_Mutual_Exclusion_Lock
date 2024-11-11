@@ -1,6 +1,6 @@
 # <span style="font-size: 2em;">MUTTY_Mutual_Exclusion_Lock</span>
 
-Implementation of a mutual exclusion using the Maekawa’s voting algorithm to coordinate processes when they access critical sections.
+Implementation of a mutual exclusion specially the Maekawa’s voting algorithm to coordinate processes when they access critical sections.
 
 ### <u><span style="font-size: 1.5em;">-lock1.erl</span></u>
 This is a basic lock that prevents multiple workers from entering the critical section simultaneously.
